@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Interação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1> Bem-Vindo !!</h1>
+    <h2>Digite seu nome</h2>
+    <input type="text" id="nomeInput" placeholder="Seu nome aqui">
+    <button onclick="mostrarNome()">Enviar</button>
+    <p id="mensagem"></p>
+
+    <script>
+        function mostrarNome() {
+            var nome = document.getElementById("nomeInput").value;
+            var mensagem = document.getElementById("mensagem");
+
+            if (nome) {
+                mensagem.innerHTML = "Olá, " + nome + " seja Bem-vindo a pagina do aluno(a)!";
+            } else {
+                mensagem.innerHTML = "Por Favor, insira seu nome";
+            }
+        }
+    </script>
+</body>
+</html>

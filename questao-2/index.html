@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Interação com Números</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Digite um número</h1>
+    <input type="number" id="numeroInput" placeholder="Digite um número">
+    <button onclick="gerarLista()">Enviar</button>
+    <p id="mensagem"></p>
+    <ul id="lista"></ul>
+
+    <script>
+        function gerarLista() {
+            var numero = document.getElementById("numeroInput").value;
+            var mensagem = document.getElementById("mensagem");
+            var lista = document.getElementById("lista");
+            var nome = "Thiago Santos"; 
+
+            // Limpa a lista anterior
+            lista.innerHTML = "";
+            mensagem.innerHTML = "";
+
+            if (numero == "") {
+                mensagem.innerHTML = "Por favor, insira um número válido";
+            } else if (numero == 5) {
+                for (var i = 1; i <= 5; i++) {
+                    var item = document.createElement("li");
+                    item.innerHTML = i + ". " + nome;
+                    lista.appendChild(item);
+                }
+            } else {
+                mensagem.innerHTML = "Digite o número 5 para ver a lista";
+            }
+        }
+    </script>
+</body>
+</html>
